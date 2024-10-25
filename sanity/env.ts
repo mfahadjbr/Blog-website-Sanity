@@ -12,9 +12,10 @@ export const projectId = assertValue(
 )
 
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
+  console.log("Environment Variable:", v);
   if (v === undefined) {
-    throw new Error(errorMessage)
+    throw new Error(errorMessage);
   }
-
-  return v
+  return v;
 }
+
